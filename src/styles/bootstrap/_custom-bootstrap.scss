@@ -1,0 +1,519 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$white: #ffffff;
+$gray-25: #fcfcfd;
+$gray-50: #f9fafb;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #d2d6db;
+$gray-400: #9da4ae;
+$gray-500: #6c737f;
+$gray-600: #4d5761;
+$gray-700: #384250;
+$gray-800: #242e3c;
+$gray-900: #1a2432;
+$brand-25: #deeefe;
+$brand-50: #ccdcff;
+$brand-100: #aec7ff;
+$brand-200: #92b3ff;
+$brand-300: #78a1ff;
+$brand-400: #5f90ff;
+$brand-500: #4880ff;
+$brand-600: #3170ff;
+$brand-700: #1c61ff;
+$brand-800: #0853f5;
+$brand-900: #0a40eb;
+$brand-1000: #0032aa;
+$primary: $brand-500;
+$red-100: #fee7da;
+$red-200: #fec8b6;
+$red-300: #fca391;
+$red-400: #f98075;
+$red-500: #f54848;
+$red-600: #d23442;
+$red-700: #b0243c;
+$red-800: #8e1635;
+$red-900: #750d31;
+$yellow-25: #fffdf4;
+$yellow-50: #fefbe8;
+$yellow-100: #fef7d2;
+$yellow-200: #feeea5;
+$yellow-300: #fce178;
+$yellow-400: #fad456;
+$yellow-500: #f8c020;
+$yellow-600: #d59e17;
+$yellow-700: #b27f10;
+$yellow-800: #8f620a;
+$yellow-900: #774d06;
+$green-25: #f8fef8;
+$green-50: #f1fdf1;
+$green-100: #e4fbe4;
+$green-200: #cbf8cf;
+$green-300: #aaeab7;
+$green-400: #8dd6a3;
+$green-500: #66bb88;
+$green-600: #4aa075;
+$green-700: #338665;
+$green-800: #206c55;
+$green-900: #13594b;
+$purple-100: #ebe7f6;
+$purple-200: #c1b4e4;
+$purple-300: #9d89d4;
+$purple-400: #7e64c7;
+$purple-500: #6444bb;
+$purple-600: #53389b;
+$purple-700: #452e81;
+$purple-800: #39266b;
+$purple-900: #2f2059;
+$gray: $gray-500;
+$brand: $brand-500;
+$red: $red-500;
+$yellow: $yellow-500;
+$green: $green-500;
+$purple: $purple-500;
+$custom-colors: (
+  "white": $white,
+  "gray": $gray,
+  "gray-25": $gray-25,
+  "gray-50": $gray-50,
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+  "brand-25": $brand-25,
+  "brand": $brand,
+  "brand-50": $brand-50,
+  "brand-100": $brand-100,
+  "brand-200": $brand-200,
+  "brand-300": $brand-300,
+  "brand-400": $brand-400,
+  "brand-500": $brand-500,
+  "brand-600": $brand-600,
+  "brand-700": $brand-700,
+  "brand-800": $brand-800,
+  "brand-900": $brand-900,
+  "brand-1000": $brand-1000,
+  "red": $red,
+  "red-100": $red-100,
+  "red-200": $red-200,
+  "red-300": $red-300,
+  "red-400": $red-400,
+  "red-500": $red-500,
+  "red-600": $red-600,
+  "red-700": $red-700,
+  "red-800": $red-800,
+  "red-900": $red-900,
+  "yellow": $yellow,
+  "yellow-100": $yellow-100,
+  "yellow-200": $yellow-200,
+  "yellow-300": $yellow-300,
+  "yellow-400": $yellow-400,
+  "yellow-500": $yellow-500,
+  "yellow-600": $yellow-600,
+  "yellow-700": $yellow-700,
+  "yellow-800": $yellow-800,
+  "yellow-900": $yellow-900,
+  "green": $green,
+  "green-100": $green-100,
+  "green-200": $green-200,
+  "green-300": $green-300,
+  "green-400": $green-400,
+  "green-500": $green-500,
+  "green-600": $green-600,
+  "green-700": $green-700,
+  "green-800": $green-800,
+  "green-900": $green-900,
+  "purple": $purple,
+  "purple-100": $purple-100,
+  "purple-200": $purple-200,
+  "purple-300": $purple-300,
+  "purple-400": $purple-400,
+  "purple-500": $purple-500,
+  "purple-600": $purple-600,
+  "purple-700": $purple-700,
+  "purple-800": $purple-800,
+  "purple-900": $purple-900,
+  "error": $red-500,
+  "success": $green-500,
+);
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 4;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1440px,
+  xxxl: 1600px,
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1280px,
+  xxxl: 1440px,
+);
+$grid-gutter-width: 32px;
+$spacer: 8px;
+$spacers: (
+  0: 0,
+  1: $spacer,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+  6: $spacer * 6,
+  7: $spacer * 7,
+  8: $spacer * 8,
+  9: $spacer * 9,
+  10: $spacer * 10,
+  11: $spacer * 11,
+  12: $spacer * 12,
+  13: $spacer * 13,
+  14: $spacer * 14,
+  15: $spacer * 15,
+);
+$border-radius: 16px;
+$border-radius-sm: 8px;
+$border-radius-lg: 24px;
+$border-radius-xl: 32px;
+$border-radius-2xl: 48px;
+$border-radius-pill: 64px;
+$form-label-margin-bottom: 8px;
+$form-label-font-size: 14px;
+$form-label-font-weight: 400;
+$form-label-color: $gray-500;
+$input-border-radius: 12px;
+$input-padding-y: 8px;
+$input-padding-x: 12px;
+$input-font-size: 14px;
+$input-font-weight: 600;
+$input-placeholder-color: $gray-300;
+$input-border-color: $gray-300;
+$box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+$modal-inner-padding: 24px;
+$modal-header-padding-x: 24px;
+$modal-header-border-color: $gray-100;
+$modal-footer-border-color: $gray-100;
+$alert-border-width: 0;
+$alert-border-radius: 8px;
+$alert-padding-y: 16px;
+$alert-padding-x: 16px;
+$badge-font-size: 14px;
+$badge-font-weight: 600;
+$badge-color: $gray-700;
+$badge-padding-y: 5px;
+$badge-padding-x: 8px;
+$badge-border-radius: 8px;
+$dropdown-border-color: $gray-300;
+$dropdown-border-radius: 12px;
+$dropdown-padding-x: 4px;
+$dropdown-padding-y: 4px;
+$dropdown-link-color: $gray-800;
+$dropdown-link-active-color: $gray-800;
+$dropdown-font-size: 14px;
+$dropdown-link-hover-bg: $gray-100;
+$dropdown-link-active-bg: $gray-200;
+$dropdown-item-padding-y: 6px;
+$dropdown-item-padding-x: 8px;
+$nav-underline-gap: 24px;
+$popover-arrow-border: $gray-50;
+$tooltip-opacity: 1;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// 5. Include remainder of required parts
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../../../node_modules/bootstrap/scss/utilities";
+@import "../../../node_modules/bootstrap/scss/reboot";
+@import "../../../node_modules/bootstrap/scss/type";
+@import "../../../node_modules/bootstrap/scss/images";
+@import "../../../node_modules/bootstrap/scss/containers";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/helpers";
+@import "../../../node_modules/bootstrap/scss/buttons";
+@import "../../../node_modules/bootstrap/scss/forms";
+@import "../../../node_modules/bootstrap/scss/dropdown";
+@import "../../../node_modules/bootstrap/scss/nav";
+@import "../../../node_modules/bootstrap/scss/alert";
+@import "../../../node_modules/bootstrap/scss/modal";
+@import "../../../node_modules/bootstrap/scss/close";
+@import "../../../node_modules/bootstrap/scss/transitions";
+@import "../../../node_modules/bootstrap/scss/spinners";
+@import "../../../node_modules/bootstrap/scss/progress";
+@import "../../../node_modules/bootstrap/scss/tooltip";
+@import "../../../node_modules/bootstrap/scss/popover";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../../../node_modules/bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+* {
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $brand;
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    text-decoration: none;
+    color: $brand;
+  }
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.container {
+  @media (max-width: 575px) {
+    min-width: 320px;
+    max-width: 100vw;
+  }
+}
+
+.link {
+  cursor: pointer;
+}
+
+.hr {
+  margin: 16px 0;
+  color: inherit;
+  border: 0;
+  border-top: 1px solid $gray-100;
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+
+.cursor-pointer,
+.pointer {
+  cursor: pointer !important;
+}
+
+.hover {
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  -webkit-transition-property: transform;
+          transition-property: transform;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  &:hover,
+  &:focus,
+  &:active {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+.hover-icon {
+  i {
+    transition: opacity 0.3s ease;
+    opacity: 0.5;
+  }
+  &:hover i {
+    opacity: 1;
+  }
+}
+
+.text-muted {
+  color: $gray-400 !important;
+}
+
+.is-deleting-animation {
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+    opacity: 0.8;
+    border-radius: inherit;
+    background-color: #e6eeff;
+    background-image: repeating-linear-gradient(
+    45deg,
+    #3d5688 0,
+    #3d5688 1px,
+    #e6eeff 0,
+    #e6eeff 50%
+    );
+    background-size: 10px 10px;
+  }
+}
+
+.break-word {
+  word-break: break-word;
+}
+
+.min-width-0 {
+  min-width: 0;
+}
+
+.is-required-dot {
+  display: inline-flex;
+  height: 100%;
+  padding-left: 8px;
+  vertical-align: top;
+  &::after {
+    display: block;
+    width: 8px;
+    height: 8px;
+    content: "";
+    border-radius: 8px;
+    background-color: $red;;
+  }
+}
+
+.flip-horizontal {
+  transform: scaleX(-1);
+}
+
+app-image.img-fluid {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.skltn.is-loading {
+  .skltn-item {
+    position: relative;
+    overflow: hidden;
+    pointer-events: none;
+    &:before {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      background-color: $gray-100;
+    }
+    &:after {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      content: "";
+      -webkit-animation: progress 2s ease-in-out infinite;
+              animation: progress 2s ease-in-out infinite;
+      background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0)
+      );
+      background-size: 200px 100%;
+    }
+  }
+  .skltn-none {
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes progress {
+  0% {
+    transform: translate(-200px);
+  }
+  to {
+    transform: translate(calc(200px + 100vw));
+  }
+}
+
+@keyframes progress {
+  0% {
+    transform: translate(-200px);
+  }
+  to {
+    transform: translate(calc(200px + 100vw));
+  }
+}
+
+@each $key, $value in $theme-colors {
+  .bg-#{$key} {
+    background-color: #{$value} !important;
+  }
+  .text-#{$key} {
+    color: #{$value} !important;
+  }
+  .bdr-#{$key} {
+    border-color: #{$value} !important;
+  }
+}
+
+.theme-dark {
+  @each $key, $value in $theme-colors {
+    .dark-bg-#{$key} {
+      background-color: #{$value} !important;
+    }
+    .dark-text-#{$key} {
+      color: #{$value} !important;
+    }
+  }
+}
+
+.post-consultation {
+  &-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 248px;
+
+    justify-content: center;
+    &.is-compact {
+      height: 148px;
+      margin: 4px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+    &-text {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+      border-radius: inherit;
+
+      justify-content: center;
+    }
+  }
+  &-description {
+    overflow: hidden;
+    max-height: 80px;
+  }
+}

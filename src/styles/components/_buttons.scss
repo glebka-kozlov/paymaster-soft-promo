@@ -1,0 +1,228 @@
+.btn {
+  @include sMainTextBold();
+
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 3px 12px;
+  transition: all 0.2s ease;
+  border: none;
+
+  gap: 12px;
+
+  &.btn-xl {
+    @include sMainTextBold();
+
+    min-width: 90px;
+    min-height: 48px;
+    padding: 3px 12px;
+    border-radius: 8px;
+
+    justify-content: center;
+    gap: 8px;
+
+    @media (min-width: 992px) {
+      @include sSubHeader();
+
+      min-width: 160px;
+      min-height: 64px;
+      padding: 7px 24px;
+      border-radius: 16px;
+    }
+    span {
+      white-space: nowrap;
+    }
+    .bi:before {
+      font-size: 24px;
+    }
+  }
+  &.btn-lg {
+    @include sBigTextBold();
+
+    min-height: 48px;
+    padding: 7px 16px;
+
+    gap: 8px;
+    span {
+      white-space: nowrap;
+    }
+    .bi:before {
+      font-size: 24px;
+    }
+  }
+  &.btn-sm {
+    @include sLabelExtra();
+
+    min-height: 32px;
+    padding: 0 12px;
+    border-radius: 24px;
+
+    gap: 12px;
+  }
+  &.btn-gray-800 {
+    @include buttonBackground(
+    $gray-800,
+    $gray-900,
+    $gray-900,
+    $gray-800,
+    $white,
+    $gray-400
+    );
+  }
+  &.btn-brand {
+    @include buttonBackground(
+    $brand-500,
+    $brand-600,
+    $brand-700,
+    $brand-500,
+    $white,
+    $brand-100
+    );
+  }
+  &.btn-brand-25 {
+    @include buttonBackground(
+    $brand-25,
+    $brand-50,
+    $brand-100,
+    $brand-25,
+    $brand-500,
+    $brand-100
+    );
+    &:hover {
+      color: $brand-600;
+    }
+    &:active {
+      color: $brand-700;
+    }
+    &:focus {
+      color: $brand-500;
+    }
+  }
+  &.btn-red {
+    @include buttonBackground(
+    $red-500,
+    $red-600,
+    $red-700,
+    $red-500,
+    $white,
+    $red-200
+    );
+  }
+  &.btn-red-25 {
+    @include buttonBackground(
+    $red-100,
+    $red-200,
+    $red-300,
+    $red-100,
+    $red-600,
+    $red-200
+    );
+    &:hover {
+      color: $red-600;
+    }
+    &:active {
+      color: $red-700;
+    }
+    &:focus {
+      color: $red-500;
+    }
+  }
+  &.btn-green {
+    @include buttonBackground(
+    $green-500,
+    $green-600,
+    $green-700,
+    $green-500,
+    $white,
+    $green-200
+    );
+  }
+  &.btn-green-25 {
+    @include buttonBackground(
+    $green-100,
+    $green-200,
+    $green-300,
+    $green-100,
+    $green-600,
+    $green-200
+    );
+    &:hover {
+      color: $green-600;
+    }
+    &:active {
+      color: $green-700;
+    }
+    &:focus {
+      color: $green-500;
+    }
+  }
+  &.btn-gray {
+    @include buttonBackground(
+    $gray-100,
+    $gray-200,
+    $gray-300,
+    $gray-100,
+    $gray-500,
+    $gray-50
+    );
+    &:hover {
+      color: $gray-600;
+    }
+    &:active {
+      color: $gray-700;
+    }
+    &:focus {
+      color: $gray-500;
+    }
+  }
+  &.btn-icon {
+    width: 32px;
+    height: 32px;
+    min-height: 32px;
+    padding: 0;
+    border-radius: 8px;
+    .bi:before {
+      font-size: 20px;
+    }
+  }
+  &.text-gray-500 {
+    &:hover {
+      color: $gray-700 !important;
+    }
+  }
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed;
+    color: $white;
+    border-color: $gray-200;
+    background-color: $gray-200;
+  }
+  .bi {
+    display: flex;
+    align-items: center;
+    width: 32px;
+    height: 30px;
+
+    justify-content: center;
+    &:before {
+      font-size: 16px;
+    }
+    &.bi-plus {
+      &:before {
+        font-size: 32px;
+      }
+    }
+    &.bi-send {
+      &:before {
+        font-size: 22px;
+      }
+    }
+  }
+  span {
+    white-space: nowrap;
+  }
+}
+
+.icon-24 {
+  font-size: 24px !important;
+}

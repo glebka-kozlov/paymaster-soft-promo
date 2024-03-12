@@ -1,5 +1,24 @@
+@import "./bootstrap/custom-bootstrap.scss";
+@import "./_vars.scss";
+@import "./mixins.scss";
+@import "../fonts/manrope/style.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
+  font-family: "Manrope", sans-serif;
 }
+
+.container-fluid {
+  max-width: 1312px;
+  padding: 0 16px;
+}
+
+section {
+  padding: 40px 0;
+
+  @media (min-width: 768px) {
+    padding: 80px 0;
+  }
+}
+
+@import "./components/buttons.scss";

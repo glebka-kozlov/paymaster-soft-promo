@@ -8,12 +8,27 @@ import "./styles/main.scss";
 
 new Swiper(".swiper--payment-form", {
   autoplay: {
-    delay: 2500,
+    delay: 3500,
     disableOnInteraction: true
   },
   effect: "fade",
+  mousewheel: true,
   pagination: {
     el: ".swiper--payment-form .swiper-pagination",
+    clickable: true
+  },
+  modules: [Autoplay, EffectFade, Navigation, Pagination]
+});
+
+new Swiper(".swiper--payment-widget", {
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: true
+  },
+  effect: "fade",
+  mousewheel: true,
+  pagination: {
+    el: ".swiper--payment-widget .swiper-pagination",
     clickable: true
   },
   modules: [Autoplay, EffectFade, Navigation, Pagination]
@@ -31,23 +46,6 @@ document.getElementById("payment-form-demo-btn").addEventListener("click", funct
       currency: "RUB"
     }
   });
-});
-
-new Swiper(".swiper--payment-widget", {
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: true
-  },
-  effect: "fade",
-  // navigation: {
-  //   nextEl: ".swiper--payment-widget .swiper-button-next",
-  //   prevEl: ".swiper--payment-widget .swiper-button-prev",
-  // },
-  pagination: {
-    el: ".swiper--payment-widget .swiper-pagination",
-    clickable: true
-  },
-  modules: [Autoplay, EffectFade, Navigation, Pagination]
 });
 
 document.getElementById("payment-widget-demo-btn").addEventListener("click", function () {

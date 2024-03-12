@@ -1,0 +1,150 @@
+$prefix: 'wmds-';
+
+$trans-dur: 0.25s;
+
+$white: #ffffff;
+$black: #000000;
+
+$gray-25: #FCFCFD;
+$gray-50: #f9fafb;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #d2d6db;
+$gray-400: #9da4ae;
+$gray-500: #6c737f;
+$gray-600: #4d5761;
+$gray-700: #384250;
+$gray-800: #1F2A37;
+$gray-900: #111927;
+
+$brand-25: #F0F8FF;
+$brand-50: #E6F2FB;
+$brand-100: #CCE6F7;
+$brand-200: #99CCEF;
+$brand-300: #66B3E8;
+$brand-400: #3399E0;
+$brand-500: #0080D8;
+$brand-600: #006CB4;
+$brand-700: #005895;
+$brand-800: #00497C;
+$brand-900: #003D67;
+
+$red-25: #FFF9F6;
+$red-50: #FEF3EC;
+$red-100: #FEE7DA;
+$red-200: #FEC8B6;
+$red-300: #FCA391;
+$red-400: #F98075;
+$red-500: #F54848;
+$red-600: #D23442;
+$red-700: #B0243C;
+$red-800: #8E1635;
+$red-900: #750D31;
+
+$yellow-25: #FFFDF4;
+$yellow-50: #FEFBE8;
+$yellow-100: #FEF7D2;
+$yellow-200: #FEEEA5;
+$yellow-300: #FCE178;
+$yellow-400: #FAD456;
+$yellow-500: #F8C020;
+$yellow-600: #D59E17;
+$yellow-700: #B27F10;
+$yellow-800: #8F620A;
+$yellow-900: #774D06;
+
+$green-25: #F8FEF8;
+$green-50: #F1FDF1;
+$green-100: #E4FBE4;
+$green-200: #CBF8CF;
+$green-300: #AAEAB7;
+$green-400: #8DD6A3;
+$green-500: #66BB88;
+$green-600: #4AA075;
+$green-700: #338665;
+$green-800: #206C55;
+$green-900: #13594B;
+
+$wm-colors: (
+  "white": $white,
+  "black": $black,
+
+  "gray-25": $gray-25,
+  "gray-50": $gray-50,
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+
+  "brand-25": $brand-25,
+  "brand-50": $brand-50,
+  "brand-100": $brand-100,
+  "brand-200": $brand-200,
+  "brand-300": $brand-300,
+  "brand-400": $brand-400,
+  "brand-500": $brand-500,
+  "brand-600": $brand-600,
+  "brand-700": $brand-700,
+  "brand-800": $brand-800,
+  "brand-900": $brand-900,
+
+  "red-25": $red-25,
+  "red-50": $red-50,
+  "red-100": $red-100,
+  "red-200": $red-200,
+  "red-300": $red-300,
+  "red-400": $red-400,
+  "red-500": $red-500,
+  "red-600": $red-600,
+  "red-700": $red-700,
+  "red-800": $red-800,
+  "red-900": $red-900,
+
+  "yellow-25": $yellow-25,
+  "yellow-50": $yellow-50,
+  "yellow-100": $yellow-100,
+  "yellow-200": $yellow-200,
+  "yellow-300": $yellow-300,
+  "yellow-400": $yellow-400,
+  "yellow-500": $yellow-500,
+  "yellow-600": $yellow-600,
+  "yellow-700": $yellow-700,
+  "yellow-800": $yellow-800,
+  "yellow-900": $yellow-900,
+
+  "green-25": $green-25,
+  "green-50": $green-50,
+  "green-100": $green-100,
+  "green-200": $green-200,
+  "green-300": $green-300,
+  "green-400": $green-400,
+  "green-500": $green-500,
+  "green-600": $green-600,
+  "green-700": $green-700,
+  "green-800": $green-800,
+  "green-900": $green-900
+);
+
+:root {
+  --font-family: "Manrope", sans-serif;
+  @each $key, $value in $wm-colors {
+    --#{$prefix}#{$key}: #{$value};
+  }
+}
+
+@each $key, $value in $wm-colors {
+  .bg-#{$key} {
+    background-color: #{$value} !important;
+  }
+  .text-#{$key} {
+    color: #{$value} !important;
+  }
+  .bdr-#{$key} {
+    border-color: #{$value} !important;
+  }
+}
