@@ -1,123 +1,65 @@
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
-
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "./styles/main.scss";
 
-new Swiper(".swiper", {
-  direction: "vertical",
-  slidesPerView: 1,
-  spaceBetween: 30,
-  mousewheel: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return "<span class=\"" + className + "\">" + (index + 1) + "</span>";
-    },
-  },
-  modules: [Navigation, Pagination],
+new Swiper(".swiper--payment-form", {
   autoplay: {
     delay: 2500,
-    disableOnInteraction: false,
+    disableOnInteraction: true
   },
+  effect: "fade",
+  pagination: {
+    el: ".swiper--payment-form .swiper-pagination",
+    clickable: true
+  },
+  modules: [Autoplay, EffectFade, Navigation, Pagination]
 });
 
-var btnShopNow1Element = document.getElementById("btn-shop-now-1");
-btnShopNow1Element.addEventListener("click", function () {
+document.getElementById("payment-form-demo-btn").addEventListener("click", function () {
 
   new cpay.PaymentWidget().init({
-    merchantId: "1b51360f-98d2-4336-a93e-4f72be2b2edd",
+    merchantId: "faf66a66-d7a0-4040-8347-49b7e32f1fdd",
     invoice: {
       description: "test payment"
     },
     amount: {
-      value: 0,
-      currency: "USD"
-    },
-    paymentForm: {
-      theme: "light",
-      primaryColor: "#f79256",
-      productCard: {
-        title: "Nike Air Max 90 By You",
-        description: "Lace up and add your touch to the sneaker revolution. Choose between classic leather or add a little summertime flair with canvas. Give it a makeover with your fave colors.",
-        imageUrl: require("./images/nike-1-b.png")
-      },
-      fields: [
-        {
-          type: "input",
-          name: "amount",
-          label: "Amount",
-          required: true
-        }
-      ]
+      value: 15145,
+      currency: "RUB"
     }
   });
 });
 
-var btnShopNow2Element = document.getElementById("btn-shop-now-2");
-btnShopNow2Element.addEventListener("click", function () {
-
-  new cpay.PaymentWidget().init({
-    merchantId: "1b51360f-98d2-4336-a93e-4f72be2b2edd",
-    invoice: {
-      description: "test payment"
-    },
-    amount: {
-      value: 0,
-      currency: "USD"
-    },
-    paymentForm: {
-      theme: "dark",
-      primaryColor: "#599899",
-      productCard: {
-        title: "Nike Air Max 1 '87 By You",
-        description: "Lace up and add your touch to the sneaker revolution. Choose between classic leather or add a little summertime flair with canvas. Give it a makeover with your fave colors.",
-        imageUrl: require("./images/nike-2-b.png")
-      },
-      fields: [
-        {
-          type: "input",
-          name: "amount",
-          label: "Amount",
-          required: true
-        }
-      ]
-    }
-  });
+new Swiper(".swiper--payment-widget", {
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: true
+  },
+  effect: "fade",
+  // navigation: {
+  //   nextEl: ".swiper--payment-widget .swiper-button-next",
+  //   prevEl: ".swiper--payment-widget .swiper-button-prev",
+  // },
+  pagination: {
+    el: ".swiper--payment-widget .swiper-pagination",
+    clickable: true
+  },
+  modules: [Autoplay, EffectFade, Navigation, Pagination]
 });
 
-var btnShopNow3Element = document.getElementById("btn-shop-now-3");
-btnShopNow3Element.addEventListener("click", function () {
+document.getElementById("payment-widget-demo-btn").addEventListener("click", function () {
 
   new cpay.PaymentWidget().init({
-    merchantId: "569f837a-1034-4165-8ff2-3620b2bf6d8d",
+    merchantId: "0f341032-d680-419a-8ac7-4d731801410e",
     invoice: {
       description: "test payment"
     },
     amount: {
-      value: 0,
-      currency: "USD"
-    },
-    paymentForm: {
-      theme: "light",
-      primaryColor: "#60d394",
-      productCard: {
-        title: "Nike Pegasus Trail 4 GORE-TEX By You",
-        description: "Lace up and add your touch to the sneaker revolution. Choose between classic leather or add a little summertime flair with canvas. Give it a makeover with your fave colors.",
-        imageUrl: require("./images/nike-3-b.png")
-      },
-      fields: [
-        {
-          type: "input",
-          name: "amount",
-          label: "Amount",
-          required: true
-        }
-      ]
+      value: 15145,
+      currency: "RUB"
     }
   });
 });

@@ -37,7 +37,7 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         filename: "./index.html",
         template: "./src/index.hbs",
-        templateParameters: require("./src/local/en.json")
+        templateParameters: require("./src/local/ru.json")
       })
     ],
     mode: argv.mode
