@@ -42,7 +42,7 @@ document.getElementById("payment-form-demo-btn").addEventListener("click", funct
       description: "test payment"
     },
     amount: {
-      value: 15145,
+      value: 14500,
       currency: "RUB"
     }
   });
@@ -56,7 +56,7 @@ document.getElementById("payment-widget-demo-btn").addEventListener("click", fun
       description: "test payment"
     },
     amount: {
-      value: 15145,
+      value: 14500,
       currency: "RUB"
     }
   });

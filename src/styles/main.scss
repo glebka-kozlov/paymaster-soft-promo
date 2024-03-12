@@ -21,4 +21,12 @@ section {
   }
 }
 
+.swiper--payment-form,
+.swiper--payment-widget {
+  
+  .swiper-pagination {
+    bottom: 32px;
+  }
+}
+
 @import "./components/buttons.scss";
