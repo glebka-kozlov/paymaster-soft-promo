@@ -62,6 +62,20 @@ new Swiper(".swiper--admin", {
   modules: [Autoplay, EffectFade, Navigation, Pagination]
 });
 
+new Swiper(".swiper--api", {
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: true
+  },
+  effect: "fade",
+  mousewheel: true,
+  pagination: {
+    el: ".swiper--api .swiper-pagination",
+    clickable: true
+  },
+  modules: [Autoplay, EffectFade, Navigation, Pagination]
+});
+
 document.getElementById("payment-form-demo-btn").addEventListener("click", function () {
 
   new cpay.PaymentWidget().init({
