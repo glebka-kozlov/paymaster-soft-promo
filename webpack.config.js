@@ -7,7 +7,7 @@ module.exports = (env, argv) => {
     entry: "./src/index.js",
     output: {
       filename: argv.mode === "development" ? "[name].js" : "[name].[fullhash].js",
-      path: argv.mode === "development" ? path.resolve(__dirname, "dev") : path.resolve(__dirname, "dist"),
+      path: argv.mode === "development" ? path.resolve(__dirname, "dev") : path.resolve(__dirname, "promo"),
       chunkFilename: "[name].[fullhash].js"
     },
     module: {
