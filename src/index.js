@@ -100,6 +100,9 @@ document.getElementById("payment-widget-demo-btn").addEventListener("click", fun
     amount: {
       value: 14500,
       currency: "RUB"
+    },
+    paymentForm: {
+      primaryColor: "#009688"
     }
   });
 });
