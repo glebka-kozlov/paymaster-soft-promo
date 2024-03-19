@@ -34,6 +34,20 @@ new Swiper(".swiper--payment-widget", {
   modules: [Autoplay, EffectFade, Navigation, Pagination]
 });
 
+new Swiper(".swiper--telegram", {
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: true
+  },
+  effect: "fade",
+  mousewheel: true,
+  pagination: {
+    el: ".swiper--telegram .swiper-pagination",
+    clickable: true
+  },
+  modules: [Autoplay, EffectFade, Navigation, Pagination]
+});
+
 new Swiper(".swiper--control-panel", {
   autoplay: {
     delay: 3500,
