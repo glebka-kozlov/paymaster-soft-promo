@@ -4,12 +4,6 @@
 @import "../fonts/manrope/style.css";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
-$cover-25: #fa7268;
-$cover-50: #ef5f67;
-$cover-100: #e34c67;
-$cover-200: #d53867;
-$cover-300: #c62368;
-
 body {
   font-family: "Manrope", sans-serif;
   position: relative;
@@ -26,7 +20,7 @@ body {
     left: 0;
     right: 0;
     content: "";
-    background-color: $cover-300;
+    background-color: #009688;
     height: 202px;
   }
 
@@ -54,7 +48,7 @@ body {
     .content-description {
       width: 100%;
       margin: 0 auto;
-      margin-bottom: 32px;
+      margin-bottom: 48px;
       padding: 0 24px;
       font-size: 16px;
       line-height: 20px;
