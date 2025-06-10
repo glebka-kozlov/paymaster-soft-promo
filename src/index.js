@@ -93,7 +93,7 @@ new Swiper(".swiper--api", {
 document.getElementById("payment-form-demo-btn").addEventListener("click", function () {
 
   new cpay.PaymentWidget().init({
-    merchantId: "faf66a66-d7a0-4040-8347-49b7e32f1fdd",
+    merchantId: "a8d171e9-134d-40da-84bc-02369bf5fca7",
     invoice: {
       description: "test payment"
     },
@@ -107,7 +107,7 @@ document.getElementById("payment-form-demo-btn").addEventListener("click", funct
 document.getElementById("payment-widget-demo-btn").addEventListener("click", function () {
 
   new cpay.PaymentWidget().init({
-    merchantId: "0f341032-d680-419a-8ac7-4d731801410e",
+    merchantId: "a8d171e9-134d-40da-84bc-02369bf5fca7",
     invoice: {
       description: "test payment"
     },
