@@ -35,7 +35,7 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        base: argv.mode === "development" ? "/" : "/promo/",
+        base: "./",
         filename: "./index.html",
         template: "./src/index.hbs",
         templateParameters: require("./src/local/ru.json")
